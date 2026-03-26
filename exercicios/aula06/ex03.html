@@ -6,6 +6,7 @@
     <title>primeiro programa</title>
 
     <style>
+        /*comentario em css*/
         body{
             background-color: gray;
             font: normal 20px arial;
@@ -19,13 +20,21 @@
     </style>
 </head>
 <body>
+    <!--comentario em html-->
     <h1>olá, mundo</h1>
     <p>Já me livrei da maldição</p>
-    <script>
-        window.alert('Meu primeiro alerta')
-        window.confirm('Você esta gostando de JS')
-        window.prompt('Qual é seu nome?')
+    <script>//variavel em JS
+
+        var n1 = Number(window.prompt('Digite uma numero:') ) 
+
+        var n2 = Number(window.prompt('Digite outo numero:') )  
+
+        var s = n1+n2
+        window.alert( `A soma entre ${n1} e ${n2} é igual a ${s}`)
         
+        //+ + concatenaçâo
+        //(number + number) = adição
+        //(string+ string) = concatenação
     </script>
 </body>
 </html>
