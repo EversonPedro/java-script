@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste 01</title>
+    <style>
+        body{
+            font: normal arial ;
+        }
+        #if{
+            border: 2px solid black;
+            width: 350px;
+            padding: 20px;
+            background-color: rgb(224, 209, 189);
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = (window.prompt('Qual é sue nome?'))
+        document.write(`<h1>Olá ${nome} </h1>`)
+    </script>
+    <h2>
+        Esse é suas informações: 
+    </h2>
+    <div id="if">
+        <script>
+            var nascimento = (window.prompt('Qual a sua data de nascimento?'))
+            var idade = (window.prompt('Qual é sua idade?'))
+            var cidade = (window.prompt('Em que cidade você mora?'))
+            document.write(`Você nascel em: ${nascimento}<br> Sua idade é: ${idade} <br> Você mora em: ${cidade}`)
+        </script>
+    </div>
+    <h2>Bem vindo :&#41;</h2>
+    
+</body>
+</html>
