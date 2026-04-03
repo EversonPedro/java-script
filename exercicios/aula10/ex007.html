@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body{
+            font: normal 20px arial;
+        }
+        input{
+            font: normal 18pt Arial;
+        }
+        div#res{
+            border: 1px solid black;
+            background-color: darkgray;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            margin-top:10px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" nome="txtn1" id="txtn1">
+    <input type="nomber" nome="txtn2" id="txtn2">
+    <input type="button" value="soma" onclick="soma()">
+
+    <div id="res"><h2>Resultado</h2></div>
+
+    <script>
+        function soma(){
+            var tx1 = window.document.querySelector('input#txtn1')
+            var tx2 = window.document.querySelector('input#txtn2')
+            var res = window.document.querySelector('div#res')
+            var n1 = Number(tx1.value)
+            var n2 = Number(tx2.value)
+            var s = n1 + n2
+            res.innerHTML=`A soma entre ${n1} e ${n2} é iqual a <strong>${s}</strong> :)`
+        }
+
+    </script>
+    
+</body>
+</html>
