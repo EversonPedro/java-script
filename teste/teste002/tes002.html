@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste02</title>
+    <style>
+        body{
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+        #resu{
+            background-color: rgb(59, 35, 3);
+            color: white;
+            width: 300px;
+            height: 50px;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .but{
+            margin: 10px;
+            width: 40px;
+            font: 1em bold arial;
+            background-color: rgb(18, 65, 136);
+            color: white;
+        }
+         
+        #but5{
+            background-color: rgb(207, 101, 51);
+            width: 60px;
+        }
+         
+        #conteiner{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(156, 120, 66);
+        }
+        #tela{
+            justify-content: center;
+            align-items: center;
+        }
+
+        #tela>h1{
+          background-color: rgb(221, 143, 40);
+          width: 300px;
+          margin: 20px auto ;
+        }
+        #resu>h2{
+            text-align: left;
+        }
+         
+        #texn1,#texn2{
+            font: 1.5em normal arial ;
+            text-align: center;
+            width: 80px;
+            height: 30px;
+            margin: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        div#butões{
+            background-color: rgb(161, 179, 206);
+            width: 350px;
+            margin: 20px auto auto auto;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <div id="tela">
+            <h1>Calculadora</h1>
+            <input type="number" nome="texn1" id="texn1">
+            <br>
+            <input type="number" nome="texn2" id="texn2">
+            <br>
+
+            <div id="butões">
+                <input type="button" value="+" onclick="soma()" id="but1" class="but">
+                <input type="button" value="X" onclick="mult()" id="but2" class="but">
+                <input type="button" value="/" onclick="div()" id="but3" class="but">
+                <input type="button" value="-" onclick="sub()" id="but4" class="but">
+
+                <input type="button" value="L" onclick="lim()" id="but5" class="but">
+            </div>
+            
+            <div id="resu">
+                <h2>Resultado:</h2>
+                <div id="res"></div>
+            </div>
+            <script>
+
+                
+                function soma(){
+                    var tx1 = window.document.querySelector('input#texn1')
+                    var tx2 = window.document.querySelector('input#texn2')
+
+                    var res = window.document.querySelector('div#res')
+                    var n1 = Number(tx1.value)
+                    var n2 = Number (tx2.value)
+
+                    var s = n1 + n2
+                    res.innerHTML=`<h2>${s}</h2>`
+                }
+
+                function mult(){
+                    var tx1 = window.document.querySelector('input#texn1')
+                    var tx2 = window.document.querySelector('input#texn2')
+
+                    var res = window.document.querySelector('div#res')
+                    var n1 = Number(tx1.value)
+                    var n2 = Number(tx2.value)
+
+                    var s = n1 * n2
+                    res.innerHTML=`<h2>${s}<h2>`
+                   
+                }
+
+                function div(){
+                    var tx1 = window.document.querySelector('input#texn1')
+                    var tx2 = window.document.querySelector('input#texn2')
+
+                    var res = window.document.querySelector('div#res')
+                    var n1 = Number(tx1.value)
+                    var n2 = Number(tx2.value)
+
+                    var s = n1 / n2
+
+                    res.innerHTML=`<h2>${s}</h2>`
+                }
+
+                function sub(){
+                    var tx1 = document.querySelector('input#texn1')
+                    var tx2 = document.querySelector('input#texn2')
+
+                    var res = document.querySelector('div#res')
+                    var n1 = Number(tx1.value)
+                    var n2 = Number(tx2.value)
+
+                    var s = n1 - n2
+
+                    res.innerHTML=`<h2>${s}</h2>`
+                }
+
+                function lim(){
+                    var res = document.querySelector('div#res')
+                    var s =''
+
+                    res.innerHTML=`${s}`
+
+
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
